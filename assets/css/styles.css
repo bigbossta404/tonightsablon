@@ -1,0 +1,157 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ECEBED;
+}
+
+
+/* HEAD */
+
+.navbar-nav li a {
+    font-weight: 400;
+    color: #000000;
+}
+
+.btnlogin {
+    padding: 14px 20px 14px 20px;
+    border: 2px solid #d8cb00;
+    border-radius: 10%;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: unset;
+}
+
+.btnlogin:hover {
+    background-color: #d8cb00;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+/* Body Section */
+
+.topsection {
+    height: 78vh;
+}
+
+.containersection {
+    height: 100%;
+}
+
+.setoblong {
+    margin-top: 2em;
+    height: 80%;
+    align-items: center;
+}
+
+.setoblong_bottom {
+    bottom: 0;
+    align-items: center;
+}
+
+.boxwarna {
+    z-index: 2;
+    padding: 15px 15px 15px 15px;
+    background-color: #F6F5F6;
+    width: 100%;
+    border-radius: 5%;
+    /* opacity: 32%; */
+    box-shadow: 0 8px 10px 0px #9a989845;
+}
+
+.dots-list {
+    justify-content: space-between;
+    margin-top: revert;
+    margin-left: 8px;
+}
+
+.dot {
+    padding: 10px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.boxdeksripsi {
+    z-index: 2;
+    padding: 3em;
+    background-color: #F6F5F6;
+    width: 100%;
+    border-radius: 5%;
+    box-shadow: 0 8px 10px 0px #9a989845;
+}
+
+.track-size {
+    box-shadow: 1px 1px 10px 0px #9a989887;
+    display: flex;
+    border-radius: 5%;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+
+.track-size a {
+    text-align: center;
+    color: #000000;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    border: 1px solid #3a3a3a31;
+    text-decoration: none;
+}
+
+.track-size a:hover,
+.track-size a:focus {
+    background-color: #d8cb00;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.buy_btn_setoblong {
+    background-color: #d8cb00;
+    border-radius: 15px;
+}
+
+.buy_btn_setoblong a {
+    padding: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    width: 100%;
+    margin: 0;
+    border-radius: 10%;
+}
+
+.next_desc {
+    background-color: #F6F5F6;
+    border-radius: 15px;
+}
+
+.next_desc a {
+    background-color: #d8cb00;
+    padding: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.display-example {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    /* position the top  edge of the element at the middle of the parent */
+    left: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    transform: translate(-65%, -40%);
+    position: absolute;
+    height: 90%;
+}
+
+#dis-img-example {
+    height: 80%;
+}

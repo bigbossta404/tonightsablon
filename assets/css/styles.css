@@ -14,6 +14,10 @@ body {
     color: #000000;
 }
 
+.navbar-nav a:hover {
+    color: #a79c01;
+}
+
 .btnlogin {
     padding: 14px 20px 14px 20px;
     border: 2px solid #d8cb00;
@@ -33,27 +37,170 @@ body {
 /* Body Section */
 
 .topsection {
-    height: 78vh;
+    height: 85vh;
 }
 
 .containersection {
     height: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position-x: 35%;
+}
+
+.containersection2 {
+    height: 100%;
+    /* background-attachment: fixed; */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position-x: 20%;
 }
 
 .setoblong {
-    margin-top: 2em;
-    height: 80%;
+    margin-top: 1em;
+    height: 70%;
     align-items: center;
 }
 
+.setoblong h2 {
+    font-weight: 600;
+}
+
 .setoblong_bottom {
+    margin-top: 1em;
     bottom: 0;
     align-items: center;
 }
 
+.caption_oblong {
+    margin-top: 10%;
+}
+
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    width: 94px;
+    height: 46px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+    box-shadow: 0 0 12px #bbbbbbc2;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #f1fbff;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+#knobs-m,
+#knobs-f,
+#button-9 .knobs span {
+    position: absolute;
+    top: 6px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 50%;
+    transition: 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#knobs-m {
+    left: 8px;
+}
+
+#knobs-f {
+    right: 8px;
+}
+
+#knobs-m,
+#knobs-f {
+    color: #fff;
+    z-index: 2;
+}
+
+#button-9 .knobs span {
+    left: 8px;
+    background-color: #03a9f4;
+    z-index: 1;
+}
+
+#button-9 .checkbox:checked+#knobs-m {
+    left: -20px;
+}
+
+#button-9 .checkbox:checked+#knobs-f {
+    right: 8px;
+}
+
+#button-9 .checkbox:checked+.knobs span {
+    left: 50px;
+    background-color: #F44336;
+}
+
+#button-9 .checkbox:checked~.layer {
+    background-color: #fcebeb;
+}
+
+
+/* Button Toggle Gender */
+
 .boxwarna {
     z-index: 2;
-    padding: 15px 15px 15px 15px;
+    padding: 10px 10px 10px 10px;
     background-color: #F6F5F6;
     width: 100%;
     border-radius: 5%;
@@ -61,10 +208,20 @@ body {
     box-shadow: 0 8px 10px 0px #9a989845;
 }
 
+.boxwarna p {
+    font-weight: 600;
+    margin-top: 1em;
+    margin-left: 1.5em;
+}
+
 .dots-list {
     justify-content: space-between;
     margin-top: revert;
-    margin-left: 8px;
+    margin-left: 15px;
+}
+
+.dots-list a {
+    text-decoration: none;
 }
 
 .dot {
@@ -74,16 +231,25 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 50%;
-    background-color: green;
+}
+
+.active-palet {
+    transform: scale(1.3);
+    box-shadow: 0 0 6px;
+}
+
+.deskripsi h3,
+.deskripsi p {
+    margin-bottom: 25px;
 }
 
 .boxdeksripsi {
     z-index: 2;
-    padding: 3em;
+    padding: 2em;
     background-color: #F6F5F6;
     width: 100%;
     border-radius: 5%;
-    box-shadow: 0 8px 10px 0px #9a989845;
+    box-shadow: 0 4px 11px 0px #9a989845;
 }
 
 .track-size {
@@ -115,43 +281,223 @@ body {
 .buy_btn_setoblong {
     background-color: #d8cb00;
     border-radius: 15px;
+    box-shadow: 0 4px 11px 0px #9a989845;
 }
 
 .buy_btn_setoblong a {
-    padding: 30px;
+    text-align: center;
+    padding: 25px;
     color: #ffffff;
     font-weight: 600;
+    font-size: 30px;
     text-decoration: none;
     width: 100%;
     margin: 0;
     border-radius: 10%;
 }
 
-.next_desc {
+.circle-back {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    width: 50px;
     background-color: #F6F5F6;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 15px;
+    box-shadow: 0 4px 11px 0px #9a989845;
 }
 
-.next_desc a {
-    background-color: #d8cb00;
-    padding: 30px;
-    border-radius: 10px;
-    color: #ffffff;
-    font-weight: 600;
+.card-desc {
+    z-index: 11;
+    width: 90%;
+    margin-left: 0.5em;
+    align-items: center;
+}
+
+.card-descoblong {
+    display: flex;
+    height: 88px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: #ffffffbe;
+    box-shadow: 0 4px 11px 0px #9a989845;
+    z-index: 1;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.card-descoblong p {
+    margin-top: revert;
 }
 
 .display-example {
     z-index: 0;
     position: absolute;
     top: 50%;
-    /* position the top  edge of the element at the middle of the parent */
     left: 50%;
-    /* position the left edge of the element at the middle of the parent */
-    transform: translate(-65%, -40%);
+    transform: translate(-70%, -33%);
     position: absolute;
     height: 90%;
 }
 
+.second-section {
+    background-color: #ffffff;
+}
+
+.content-produksi {
+    padding: 5em 6em 5em 6em;
+}
+
+.head-title h2 {
+    display: contents;
+    color: #353200;
+    font-weight: 600;
+}
+
+.btn-lanjut {
+    display: flex;
+    height: 2.5em;
+    width: 10em;
+    border-radius: 10px;
+    background-color: #d8cb00;
+    color: #ffffff;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 7px 0px #909090ab;
+}
+
+.btn-lanjut:hover {
+    background-color: #b3a700;
+    color: #ffffff;
+}
+
+.dokumentasi-section {
+    height: 80vh;
+    background-color: #ffffff;
+}
+
+.content-doc {
+    padding: 5em 6em 5em 6em;
+}
+
+.section-third {
+    height: 80vh;
+}
+
+.row-third {
+    height: 100%;
+    width: 100%;
+}
+
+.row-third p {
+    font-size: 20px;
+    margin-bottom: 2em;
+}
+
+.col-third {
+    width: 45%;
+}
+
+.col-img {
+    text-align: end;
+    height: 100%;
+}
+
+.item-title h5 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.footersection {
+    background-color: #505050;
+    color: #ffffff;
+    height: 40vh;
+}
+
+.content-foot {
+    padding: 20px 0 20px 0;
+}
+
+.display-example-bottom {
+    z-index: -1;
+    height: 100%;
+}
+
+.content-third {
+    height: 100%;
+}
+
+#line-title {
+    margin-top: 5px;
+    width: 40px;
+    height: 3px;
+    background: #fdc134;
+    left: calc(50% - 20px);
+}
+
+#item-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#line-title::after {
+    content: '';
+    width: 120px;
+    position: absolute;
+    height: 1px;
+    background: #d1d1d1;
+    left: calc(50% - 60px);
+}
+
 #dis-img-example {
-    height: 80%;
+    height: 89%;
+}
+
+#dis-img-bottom {
+    height: 500px;
+}
+
+#btndaftarnav {
+    margin-right: 1em;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+}
+
+#btndaftarnav:hover {
+    color: #a79c01;
+}
+
+#btnback-desc {
+    font-size: 36px;
+    color: #d8cb00;
+    /* transform: translate(-20px, 0px); */
+}
+
+#btnback-desc:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#btncekoblong {
+    text-align: center;
+    padding: 10px 30px 10px 30px;
+    background-color: #d8cb00;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px #8e8e8ea8;
+}
+
+#btncekoblong:hover {
+    background-color: #b3a700;
+    color: #ffffff;
 }
